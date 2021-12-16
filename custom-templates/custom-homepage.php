@@ -53,7 +53,6 @@
 <div class= "homepage">
 	<?php get_header();?> <!-- calls the header script -->
 	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> <!-- gets title of the webpage -->
-	
 </div>
 
 <div class = "intro">
@@ -65,15 +64,15 @@
 </div>
 	
 <div class= "form">
-
-	<form class= "login" method= "post" action= '<?php get_bloginfo('url'); ?>form_use.php'>
+	
+	<form class= "login">
 	
     <label>User Name   </label>
 
-    <input type="text" name="username" placeholder="User Name"><br>
+    <input type="text" name="uname" placeholder="User Name"><br>
 
     <label>Password   </label>
-   
+
     <input type="password" name="password" placeholder="Password"><br><br> 
 
     <button class= "button bt-mini" type="submit">Login</button>
