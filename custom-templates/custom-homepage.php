@@ -52,7 +52,7 @@
 
 <div class= "homepage">
 	<?php get_header();?> <!-- calls the header script -->
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> <!-- gets title of the webpage -->
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	
 </div>
 

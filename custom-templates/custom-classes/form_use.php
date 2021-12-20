@@ -1,6 +1,5 @@
 <?php
 
-
 	class arrived_form_data
 	{
 		
@@ -129,21 +128,24 @@
 		* @param: $this->result_query_username = querry result to check that the insert username value is in the column username
 		* @param: $this->check_password  = stores the value of the password what was inserted in the form for later checking
 		* @param: $this->result_query_password = querry result to check that the insert password value is in the column password
+		* @param: $page_object = stores the title of the website where it will be redirected
+		* @param: $page_id = gets the ID of the website where it will be redirected
+		* @param: $permalink = the URL of the website where it will be redirected
 		*/
-		
 		public function login_to_project()
 		{	
-			
 			if((strcmp($this->check_username, $this->result_query_username) === 0 ) && (strcmp($this->check_password,$this->result_query_password) === 0)) 
 			{
-				echo "Proceed to login";
+				$page_title = get_page_by_title("Project page");
+				$page_id = $page_title->ID; // find ID of the Project page
+				$permalink = get_permalink( $page_id ); // gets URL
+				
+				echo '<script language="javascript">window.location.href ="'.$permalink.'"</script>'; // javascript for redirecting to the Project page url
 			}
-			
 				else
 				{
 					echo "Please give right username and password";
 				}
-			
 		}
 		
 		//Is called when the script is ended or exit , does deallocate memory and other cleanup for a class object and its class members when the object is destroyed.
@@ -154,3 +156,4 @@
 		}
 	}
 ?>
+

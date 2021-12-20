@@ -17,10 +17,16 @@
 .intro{
   margin: auto;
   width: 80%;
-  text-align: left;
+  text-align: center;
 }
 
-
+.btn-group button {
+  margin: auto;
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 80%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
 }
 
 </style>
@@ -29,13 +35,20 @@
 
 
 <div class= "homepage">
-	<?php get_header();?> <!-- calls the header script -->
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> <!-- gets title of the webpage -->
+	<?php get_header();?>
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> 
 	
 </div>
 
 <div class = "intro">
 	<p>Homepage IOT sensor project</p>
+</div>
+
+
+
+<div class="btn-group"> 
+	<button class="button bt-mini">Show data</button>
+	<button class="button bt-mini">Show table</button>
 </div>
 
 
