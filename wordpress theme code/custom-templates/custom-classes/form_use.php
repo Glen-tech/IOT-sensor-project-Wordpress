@@ -32,10 +32,9 @@
 		*@param:$this->result_query_password = querry result to check that the insert password value is in the column password
 		*/
 			
-		
 		public function __construct($check_username,$check_password,$query_username, $query_password , $result_query_username , $result_query_password)
 		{
-			$this->check_username=$check_username; // $this is used for a reference to the current property
+			$this->check_username =$check_username; // $this is used for a reference to the current property
 			$this->check_password =$check_password;
 			
 			$this->query_username= $query_username;
@@ -53,13 +52,11 @@
 		
 		public function get_post_form() 
 		{
-			
 			if(isset($_POST['username'],$_POST['password']) === true) // check if both values of the form are submitted 
 			{
 				$this->check_username = $_POST['username'];
 				$this->check_password = $_POST['password'];
-			}
-			
+			}	
 		}
 		
 		/*
