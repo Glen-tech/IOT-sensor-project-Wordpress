@@ -136,7 +136,6 @@
 				$page_title = get_page_by_title("Project page");
 				$page_id = $page_title->ID; // find ID of the Project page
 				$permalink = get_permalink( $page_id ); // gets URL
-				
 				echo '<script language="javascript">window.location.href ="'.$permalink.'"</script>'; // javascript for redirecting to the Project page url
 			}
 				else

@@ -1,5 +1,5 @@
-<html>
 
+<html>
 
 <?php
 
@@ -29,6 +29,11 @@
   display: block; /* Make the buttons appear below each other */
 }
 
+br {
+   display: block;
+   margin: 6px 0;
+}
+
 </style>
 
 <body>
@@ -47,8 +52,11 @@
 
 
 <div class="btn-group"> 
-	<button class="button bt-mini">Show data</button>
-	<button class="button bt-mini">Show table</button>
+	<button class= "button bt-mini"  onclick="location.href='http://localhost/wordpress/show-table/';">Show table</button>
+	</br>
+	<button class= "button bt-mini"  onclick="location.href='http://localhost/wordpress/json-sensors-data/';">Show JSON data</button>
+	</br>
+	<button class= "button bt-mini"> Log out </button>
 </div>
 
 

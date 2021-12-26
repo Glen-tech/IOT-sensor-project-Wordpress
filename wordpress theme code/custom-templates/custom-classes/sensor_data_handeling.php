@@ -60,7 +60,7 @@ class handeling_data_from_sensors
 		$api_key = ($this->data_from_post)->api_key[0]; 
 		echo $api_key;
 		
-		if($api_key === "enterakey") // === meens identical to eachother == is equal
+		if($api_key === "enterHere123456789") // === meens identical to eachother == is equal
 		{
 			echo "Proceed";
 		}
@@ -106,6 +106,11 @@ class handeling_data_from_sensors
 		$wpdb->query("INSERT INTO $query_tablename_id(sensor_name_value,sensor_value) VALUES('Temperature' , ".(float)$this->temperature.")"); 
 		$wpdb->query("INSERT INTO $query_tablename_id(sensor_name_value,sensor_value) VALUES('Light' , ".(float)$this->light.")"); 	
 	}
+	
+		/*
+		* @abstract = this function shows the table of the sensor data
+		* @global:$wpdb = used to interact with a database without needing to use raw SQL statements
+		*/
 	
 	//Is called when the script is ended or exit , does deallocate memory and other cleanup for a class object and its class members when the object is destroyed.
 		
